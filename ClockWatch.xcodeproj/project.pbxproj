@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C62017CF29FF99FC00186084 /* ClockWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C62017CE29FF99FC00186084 /* ClockWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C62017D429FF99FC00186084 /* ClockWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62017D329FF99FC00186084 /* ClockWatchApp.swift */; };
+		C62017D629FF99FC00186084 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62017D529FF99FC00186084 /* ContentView.swift */; };
+		C62017D829FF99FE00186084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62017D729FF99FE00186084 /* Assets.xcassets */; };
+		C62017DB29FF99FE00186084 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62017DA29FF99FE00186084 /* Preview Assets.xcassets */; };
+		C62017E829FF9A4B00186084 /* ClockTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62017E729FF9A4B00186084 /* ClockTimer.swift */; };
+		C62017EB29FF9B7800186084 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62017EA29FF9B7800186084 /* Int+Extensions.swift */; };
+		C62017ED29FF9CF900186084 /* GridAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62017EC29FF9CF900186084 /* GridAlgorithm.swift */; };
+		C62017F029FF9DD300186084 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62017EF29FF9DD300186084 /* GridView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C62017D029FF99FC00186084 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C62017C229FF99FC00186084 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C62017CD29FF99FC00186084;
+			remoteInfo = "ClockWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C62017E129FF99FE00186084 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C62017CF29FF99FC00186084 /* ClockWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C62017C829FF99FC00186084 /* ClockWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62017CE29FF99FC00186084 /* ClockWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClockWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62017D329FF99FC00186084 /* ClockWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockWatchApp.swift; sourceTree = "<group>"; };
+		C62017D529FF99FC00186084 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C62017D729FF99FE00186084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C62017DA29FF99FE00186084 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C62017E729FF9A4B00186084 /* ClockTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTimer.swift; sourceTree = "<group>"; };
+		C62017EA29FF9B7800186084 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		C62017EC29FF9CF900186084 /* GridAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridAlgorithm.swift; sourceTree = "<group>"; };
+		C62017EF29FF9DD300186084 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C62017CB29FF99FC00186084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C62017C129FF99FC00186084 = {
+			isa = PBXGroup;
+			children = (
+				C62017D229FF99FC00186084 /* ClockWatch Watch App */,
+				C62017C929FF99FC00186084 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C62017C929FF99FC00186084 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C62017C829FF99FC00186084 /* ClockWatch.app */,
+				C62017CE29FF99FC00186084 /* ClockWatch Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C62017D229FF99FC00186084 /* ClockWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				C62017EE29FF9DC700186084 /* View */,
+				C62017E929FF9B6B00186084 /* Extensions */,
+				C62017E629FF9A4100186084 /* Helpers */,
+				C62017E529FF9A3900186084 /* App */,
+				C62017D729FF99FE00186084 /* Assets.xcassets */,
+				C62017D929FF99FE00186084 /* Preview Content */,
+			);
+			path = "ClockWatch Watch App";
+			sourceTree = "<group>";
+		};
+		C62017D929FF99FE00186084 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C62017DA29FF99FE00186084 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C62017E529FF9A3900186084 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C62017D329FF99FC00186084 /* ClockWatchApp.swift */,
+				C62017D529FF99FC00186084 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C62017E629FF9A4100186084 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C62017E729FF9A4B00186084 /* ClockTimer.swift */,
+				C62017EC29FF9CF900186084 /* GridAlgorithm.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C62017E929FF9B6B00186084 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C62017EA29FF9B7800186084 /* Int+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C62017EE29FF9DC700186084 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C62017EF29FF9DD300186084 /* GridView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C62017C729FF99FC00186084 /* ClockWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62017E229FF99FE00186084 /* Build configuration list for PBXNativeTarget "ClockWatch" */;
+			buildPhases = (
+				C62017C629FF99FC00186084 /* Resources */,
+				C62017E129FF99FE00186084 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C62017D129FF99FC00186084 /* PBXTargetDependency */,
+			);
+			name = ClockWatch;
+			productName = ClockWatch;
+			productReference = C62017C829FF99FC00186084 /* ClockWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		C62017CD29FF99FC00186084 /* ClockWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62017DE29FF99FE00186084 /* Build configuration list for PBXNativeTarget "ClockWatch Watch App" */;
+			buildPhases = (
+				C62017CA29FF99FC00186084 /* Sources */,
+				C62017CB29FF99FC00186084 /* Frameworks */,
+				C62017CC29FF99FC00186084 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ClockWatch Watch App";
+			productName = "ClockWatch Watch App";
+			productReference = C62017CE29FF99FC00186084 /* ClockWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C62017C229FF99FC00186084 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C62017C729FF99FC00186084 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					C62017CD29FF99FC00186084 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = C62017C529FF99FC00186084 /* Build configuration list for PBXProject "ClockWatch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C62017C129FF99FC00186084;
+			productRefGroup = C62017C929FF99FC00186084 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C62017C729FF99FC00186084 /* ClockWatch */,
+				C62017CD29FF99FC00186084 /* ClockWatch Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C62017C629FF99FC00186084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62017CC29FF99FC00186084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62017DB29FF99FE00186084 /* Preview Assets.xcassets in Resources */,
+				C62017D829FF99FE00186084 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C62017CA29FF99FC00186084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62017D629FF99FC00186084 /* ContentView.swift in Sources */,
+				C62017EB29FF9B7800186084 /* Int+Extensions.swift in Sources */,
+				C62017ED29FF9CF900186084 /* GridAlgorithm.swift in Sources */,
+				C62017E829FF9A4B00186084 /* ClockTimer.swift in Sources */,
+				C62017F029FF9DD300186084 /* GridView.swift in Sources */,
+				C62017D429FF99FC00186084 /* ClockWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C62017D129FF99FC00186084 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C62017CD29FF99FC00186084 /* ClockWatch Watch App */;
+			targetProxy = C62017D029FF99FC00186084 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C62017DC29FF99FE00186084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C62017DD29FF99FE00186084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C62017DF29FF99FE00186084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClockWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4K9439YVRN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ClockWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamalaartsen.ClockWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		C62017E029FF99FE00186084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClockWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4K9439YVRN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ClockWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamalaartsen.ClockWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		C62017E329FF99FE00186084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4K9439YVRN;
+				INFOPLIST_KEY_CFBundleDisplayName = ClockWatch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamalaartsen.ClockWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C62017E429FF99FE00186084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4K9439YVRN;
+				INFOPLIST_KEY_CFBundleDisplayName = ClockWatch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamalaartsen.ClockWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C62017C529FF99FC00186084 /* Build configuration list for PBXProject "ClockWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62017DC29FF99FE00186084 /* Debug */,
+				C62017DD29FF99FE00186084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C62017DE29FF99FE00186084 /* Build configuration list for PBXNativeTarget "ClockWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62017DF29FF99FE00186084 /* Debug */,
+				C62017E029FF99FE00186084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C62017E229FF99FE00186084 /* Build configuration list for PBXNativeTarget "ClockWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62017E329FF99FE00186084 /* Debug */,
+				C62017E429FF99FE00186084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C62017C229FF99FC00186084 /* Project object */;
+}
