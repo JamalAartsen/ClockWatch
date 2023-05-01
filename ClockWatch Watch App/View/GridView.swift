@@ -16,10 +16,10 @@ struct GridView: View {
     // MARK: - BODY
     var body: some View {
         ZStack {
-            Color.gray
-                .opacity(0.1)
-                .cornerRadius(20)
-                .ignoresSafeArea()
+//            Color.gray
+//                .opacity(0.1)
+//                .cornerRadius(20)
+//                .ignoresSafeArea()
             
             VStack {
                 
