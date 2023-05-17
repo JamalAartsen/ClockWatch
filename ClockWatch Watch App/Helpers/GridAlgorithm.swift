@@ -12,7 +12,7 @@ class GridAlgorithm {
     // TODO: Dependency Injection
     let clockTimer = ClockTimer()
     var array: [[Int]] = [[]]
-    let fixedvalues = [1, 3, 0, 7, 1, 9, 9, 8, 3, 3]
+    var fixedvalues = [1, 3, 0, 7, 1, 9, 9, 8]
     
     init() {
         array = createArray(fixedValues: fixedvalues)
@@ -34,8 +34,8 @@ extension GridAlgorithm {
             // Check if the fixedValuesArray contains less than 10 elements and add randomnumer to it.
             if fixedValuesArray.count < 10 {
                 let randomNumber = Int.random(in: 0...9)
-                print("💯 randomNumber: \(randomNumber)")
                 fixedValuesArray.append(randomNumber)
+                self.fixedvalues = fixedValuesArray
             }
             
             // If the current array index is less than the number of fixed values,
