@@ -10,30 +10,17 @@ import SwiftUI
 struct GridView: View {
     
     // MARK: - PROPERTIES
-    let grid = GridAlgorithm()
+    private let grid = GridAlgorithm()
+    private let animationDuration: TimeInterval = 0.1
+    
     @ObservedObject var clockTimer = ClockTimer()
+    @State private var currentColumnIndices: [Int] = []
+    @State private var targetColumnIndices: [Int] = []
     
     // MARK: - BODY
     var body: some View {
         ZStack {
-//            Color.gray
-//                .opacity(0.1)
-//                .cornerRadius(20)
-//                .ignoresSafeArea()
-            
             VStack {
-                
-//                HStack {
-//                    ForEach(0..<10) { index in
-//                        if let currentTime = clockTimer.currentTime {
-//                            Text("\(currentTime[index])")
-//                                .frame(width: 13)
-//                                .font(.system(size: 12))
-//                                .padding(.bottom, 5)
-//                        }
-//                    }
-//                }
-
                 Spacer()
                 
                 ForEach(0..<grid.array[0].count) { column in
@@ -43,36 +30,59 @@ struct GridView: View {
                         ForEach(0..<grid.array.count) { row in
                             // Retrieve the number from the gridArray at the current row and column
                             let number = grid.array[row][column]
-                            // Determine the text color for the current cell
-                            let isTimeNumber = self.isTimeNumber(row: row, column: column)
-                            // Determine if the current cell's value is a birthday number
-                            let isBirthdayNumber = isBirthdayNumber(row: row, column: column)
+                           
+                            let _ = updateTargetColumnIndices()
+                            let _ = animateNumbers()
                             
                             Text("\(number)")
+                                .frame(width: 10)
                                 .font(.system(size: 12))
-                                .foregroundColor(isTimeNumber ? .white : isBirthdayNumber ? .blue : .white)
-                                .scaleEffect(isTimeNumber ? 1.2 : 0.8)
-                                .opacity(isTimeNumber ? 1 : 0.5)
-                                .frame(width: 13)
-                            //                            .animation(.easeInOut(duration: 0.5))
+                                .foregroundColor(colorForIndex(rowIndex: row, columnIndex: column))
+                                .scaleEffect(scaleForIndex(rowIndex: row, columnIndex: column))
+                                .opacity(opacityForIndex(rowIndex: row, columnIndex: column))
+                                .animation(.spring(dampingFraction: 1), value: UUID())
+                                .background(
+                                    backgroundColorForIndex(rowIndex: row, columnIndex: column)
+                                )
+                                .cornerRadius(10)
                         } //: LOOP
                     } //: HSTACK
                 } //: LOOP
                 
                 Spacer()
             } //: VSTACK
+            .onAppear {
+                initializeIndices()
+            }
         } //: ZSTACK
     }
 }
 
 // MARK: - FUNCTIONS
-extension GridView {
+private extension GridView {
    
-    private func isTimeNumber(row: Int, column: Int) -> Bool {
-        return grid.array[row][column] == clockTimer.currentTime?[row]
+    func initializeIndices() {
+        currentColumnIndices = Array(repeating: 0, count: grid.array.count)
+        targetColumnIndices = Array(repeating: 0, count: grid.array.count)
     }
     
-    private func isBirthdayNumber(row: Int, column: Int) -> Bool {
+    func updateTargetColumnIndices() {
+        for rowIndex in grid.array.indices {
+            guard let currentTime = clockTimer.currentTime?[rowIndex] else {
+                return
+            }
+            
+            for (index, value) in grid.array[rowIndex].enumerated() {
+                if value == currentTime {
+                    DispatchQueue.main.async {
+                        targetColumnIndices[rowIndex] = index
+                    }
+                }
+            }
+        }
+    }
+    
+    func isBirthdayNumber(row: Int, column: Int) -> Bool {
         let fixedValues = grid.fixedvalues
         let fixedValuesWithoutLastTwo = fixedValues.dropLast(2)
         
@@ -80,6 +90,78 @@ extension GridView {
             return grid.array[row][column] == fixedValuesWithoutLastTwo[row]
         } else {
             return false
+        }
+    }
+    
+    func animateNumbers() {
+        for rowIndex in grid.array.indices {
+            guard rowIndex < currentColumnIndices.count else { return }
+            
+            let currentColumnIndex = currentColumnIndices[rowIndex]
+            let targetColumnIndex = targetColumnIndices[rowIndex]
+            
+            let range = stride(from: currentColumnIndex, through: targetColumnIndex, by: targetColumnIndex > currentColumnIndex ? 1 : -1)
+            
+            for index in range {
+                DispatchQueue.main.asyncAfter(deadline: .now() + Double(abs(index - currentColumnIndex)) * animationDuration) {
+                    self.currentColumnIndices[rowIndex] = index
+                }
+            }
+        }
+    }
+    
+    func scaleForIndex(rowIndex: Int, columnIndex: Int) -> CGFloat {
+        guard rowIndex < currentColumnIndices.count else { return 1.0 }
+        
+        let currentColumnIndex = currentColumnIndices[rowIndex]
+        
+        if columnIndex == currentColumnIndex {
+            return 1.1
+        } else {
+            return 0.8
+        }
+    }
+    
+    func colorForIndex(rowIndex: Int, columnIndex: Int) -> Color {
+        guard rowIndex < currentColumnIndices.count else { return .gray }
+        let isBirthdayNumber = isBirthdayNumber(row: rowIndex, column: columnIndex)
+        
+        let currentColumnIndex = currentColumnIndices[rowIndex]
+        
+        if columnIndex == currentColumnIndex {
+            return .white
+        } else if isBirthdayNumber {
+            return .blue
+        }
+        
+        return .white
+    }
+    
+    func opacityForIndex(rowIndex: Int, columnIndex: Int) -> CGFloat {
+        guard rowIndex < currentColumnIndices.count else { return 0.3 }
+        let isBirthdayNumber = isBirthdayNumber(row: rowIndex, column: columnIndex)
+        
+        let currentColumnIndex = currentColumnIndices[rowIndex]
+        
+        if columnIndex == currentColumnIndex {
+            return 1.0
+        } else if isBirthdayNumber {
+            return 0.8
+        }
+        
+        return 0.4
+    }
+    
+    func backgroundColorForIndex(rowIndex: Int, columnIndex: Int) -> Color {
+        guard rowIndex < currentColumnIndices.count else { return .gray }
+        
+        let currentColumnIndex = currentColumnIndices[rowIndex]
+        
+        if columnIndex == currentColumnIndex {
+            return .white
+                .opacity(0.1)
+        } else {
+            return .clear
         }
     }
 }
