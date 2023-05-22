@@ -41,9 +41,6 @@ struct GridView: View {
                                 .scaleEffect(scaleForIndex(rowIndex: row, columnIndex: column))
                                 .opacity(opacityForIndex(rowIndex: row, columnIndex: column))
                                 .animation(.spring(dampingFraction: 1), value: UUID())
-                                .background(
-                                    backgroundColorForIndex(rowIndex: row, columnIndex: column)
-                                )
                                 .cornerRadius(10)
                         } //: LOOP
                     } //: HSTACK
